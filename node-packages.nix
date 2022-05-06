@@ -184,22 +184,13 @@ let
         sha1 = "6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f";
       };
     };
-    "fs-extra-0.26.7" = {
+    "fs-extra-10.1.0" = {
       name = "fs-extra";
       packageName = "fs-extra";
-      version = "0.26.7";
+      version = "10.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fs-extra/-/fs-extra-0.26.7.tgz";
-        sha1 = "9ae1fdd94897798edab76d0918cf42d0c3184fa9";
-      };
-    };
-    "fs.realpath-1.0.0" = {
-      name = "fs.realpath";
-      packageName = "fs.realpath";
-      version = "1.0.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz";
-        sha1 = "1504ad2523158caa40db4a2787cb01411994ea4f";
+        url = "https://registry.npmjs.org/fs-extra/-/fs-extra-10.1.0.tgz";
+        sha512 = "oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==";
       };
     };
     "function-bind-1.1.1" = {
@@ -227,15 +218,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/glob/-/glob-6.0.4.tgz";
         sha1 = "0f08860f6a155127b2fadd4f9ce24b1aab6e4d22";
-      };
-    };
-    "glob-7.2.0" = {
-      name = "glob";
-      packageName = "glob";
-      version = "7.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/glob/-/glob-7.2.0.tgz";
-        sha512 = "lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==";
       };
     };
     "graceful-fs-3.0.12" = {
@@ -355,22 +337,13 @@ let
         sha1 = "4b0da1442104d1b336340e80797e865cf39f7d72";
       };
     };
-    "jsonfile-2.4.0" = {
+    "jsonfile-6.1.0" = {
       name = "jsonfile";
       packageName = "jsonfile";
-      version = "2.4.0";
+      version = "6.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz";
-        sha1 = "3736a2b428b87bbda0cc83b53fa3d633a35c2ae8";
-      };
-    };
-    "klaw-1.3.1" = {
-      name = "klaw";
-      packageName = "klaw";
-      version = "1.3.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/klaw/-/klaw-1.3.1.tgz";
-        sha1 = "4088433b46b3b1ba259d78785d8e96f73ba02439";
+        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz";
+        sha512 = "5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==";
       };
     };
     "load-json-file-1.1.0" = {
@@ -652,15 +625,6 @@ let
         sha1 = "e439be2aaee327321952730f99a8929e4fc50582";
       };
     };
-    "rimraf-2.7.1" = {
-      name = "rimraf";
-      packageName = "rimraf";
-      version = "2.7.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz";
-        sha512 = "uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==";
-      };
-    };
     "semver-5.7.1" = {
       name = "semver";
       packageName = "semver";
@@ -787,6 +751,15 @@ let
         sha1 = "5887966bb582a4503a41eb524f7d35011815a613";
       };
     };
+    "universalify-2.0.0" = {
+      name = "universalify";
+      packageName = "universalify";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz";
+        sha512 = "hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==";
+      };
+    };
     "validate-npm-package-license-3.0.4" = {
       name = "validate-npm-package-license";
       packageName = "validate-npm-package-license";
@@ -832,12 +805,11 @@ let
       sources."ext-list-2.2.2"
       sources."ext-name-3.0.0"
       sources."find-up-1.1.2"
-      (sources."fs-extra-0.26.7" // {
+      (sources."fs-extra-10.1.0" // {
         dependencies = [
           sources."graceful-fs-4.2.10"
         ];
       })
-      sources."fs.realpath-1.0.0"
       sources."function-bind-1.1.1"
       sources."get-stdin-4.0.1"
       sources."glob-6.0.4"
@@ -853,12 +825,7 @@ let
       sources."is-finite-1.1.0"
       sources."is-plain-obj-1.1.0"
       sources."is-utf8-0.2.1"
-      (sources."jsonfile-2.4.0" // {
-        dependencies = [
-          sources."graceful-fs-4.2.10"
-        ];
-      })
-      (sources."klaw-1.3.1" // {
+      (sources."jsonfile-6.1.0" // {
         dependencies = [
           sources."graceful-fs-4.2.10"
         ];
@@ -901,11 +868,6 @@ let
       sources."redent-1.0.0"
       sources."repeating-2.0.1"
       sources."resolve-1.22.0"
-      (sources."rimraf-2.7.1" // {
-        dependencies = [
-          sources."glob-7.2.0"
-        ];
-      })
       sources."semver-5.7.1"
       sources."signal-exit-3.0.7"
       sources."sort-keys-1.1.2"
@@ -924,6 +886,7 @@ let
         ];
       })
       sources."trim-newlines-1.0.0"
+      sources."universalify-2.0.0"
       sources."validate-npm-package-license-3.0.4"
       sources."wrappy-1.0.2"
     ];
