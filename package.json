@@ -34,9 +34,5 @@
     "type": "git",
     "url": "https://github.com/rvl/bower2nix"
   },
-  "license": "GPL-3.0",
-  "scripts": {
-    "postinstall": "echo tsd install",
-    "prepublish": "tsc"
-  }
+  "license": "GPL-3.0"
 }
