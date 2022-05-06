@@ -38,8 +38,5 @@
   "scripts": {
     "postinstall": "echo tsd install",
     "prepublish": "tsc"
-  },
-  "typescript": {
-    "definition": "dist/bower2nix.d.ts"
   }
 }
